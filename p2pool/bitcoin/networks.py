@@ -113,7 +113,7 @@ nets = dict(
         POW_FUNC=data.hash256,
         BLOCK_PERIOD=300, # s
         SYMBOL='NEOS',
-        CONF_FILE_FUNC=lambda: os.path.join(os.path.join("C:/", "Program Files (x86)", "Neos-v2.0.2", "neos-data") if platform.system() == 'Windows' else os.path.expanduser('~/usr/local/neos') if platform.system() == 'Darwin' else os.path.expanduser('~/usr/local/neos'), 'neoscoin.conf'),
+        CONF_FILE_FUNC=lambda: os.path.join(os.path.join("C:/", "Program Files (x86)", "Neos-v2.0.2", "neos-data") if platform.system() == 'Windows' else os.path.expanduser('~/.neoscoin') if platform.system() == 'Darwin' else os.path.expanduser('~/.neoscoin'), 'neoscoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http://stratum.infernopool.com:8880/block/',
         ADDRESS_EXPLORER_URL_PREFIX='http://stratum.infernopool.com:8880/address/',
         TX_EXPLORER_URL_PREFIX='http://stratum.infernopool.com:8880/tx/',
