@@ -1,1 +1,1 @@
-run_p2pool.py --net neoscoin -f 0 --give-author 0 --irc-announce
+python run_p2pool.py --net neoscoin -f 0 --give-author 0 --irc-announce
