@@ -8,7 +8,7 @@ from p2pool.util import math
 # changes can be done by changing one, then the other
 
 nets = dict(
-            neoscoin=math.Object(
+    neoscoin=math.Object(
         PARENT=networks.nets['neoscoin'],
         SHARE_PERIOD=30, # seconds
         CHAIN_LENGTH=24*60*60//15, # shares
@@ -22,7 +22,7 @@ nets = dict(
         MAX_TARGET=2**256//2**32 - 1,
         PERSIST=True,
         WORKER_PORT=1111,
-        BOOTSTRAP_ADDRS='stratum.infernopool.com stoyvo.knowsitall.info'.split(' '),
+        BOOTSTRAP_ADDRS='stratum.infernopool.com;neos.stoyvo.com'.split(';'),
         ANNOUNCE_CHANNEL='#p2pool-neos',
         VERSION_CHECK=lambda v: True,
         VERSION_WARNING=lambda v: 'Upgrade neoscoin to >=0.8.5.1!' if v < 80501 else None,
