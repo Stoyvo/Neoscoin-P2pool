@@ -243,7 +243,7 @@ def main(args, net, datadir_path, merged_urls, worker_endpoint):
         if args.irc_announce:
             from twisted.words.protocols import irc
             class IRCClient(irc.IRCClient):
-                nickname = 'Neos-p2pool_%02i'
+                nickname = 'Neos-p2pool_%02i' % (random.randrange(100),) 
                 channel = net.ANNOUNCE_CHANNEL
                 def lineReceived(self, line):
                     if p2pool.DEBUG:
